@@ -3,7 +3,7 @@
   'mli'
   'eliom'
 ]
-'foldingStartMarker': '(\\b(module|class|)\\s.*?=\\s*$|\\bbegin|sig|struct|(object(\\s*\\(_?[a-z]+\\))?)\\s*$|\\bwhile\\s.*?\\bdo\\s*$|^let(?:\\s+rec)?\\s+[a-z_][a-zA-Z0-9_]*\\s+(?!=)\\S)'
+'foldingStartMarker': '(\\b(module|class|)\\s.*?=\\s*$|\\bbegin|sig|struct|(object(\\s*\\(_?[a-z]+\\))?)\\s*$|\\bwhile\\s.*?\\bdo\\s*$|^(let|value)(?:\\s+rec)?\\s+[a-z_][a-zA-Z0-9_]*\\s+(?!=)\\S)'
 'foldingStopMarker': '(\\bend(\\s+in)?[ \\t]*(;{1,2}|=)?|\\bdone;?|^\\s*;;|^\\s*in)[ \\t]*$'
 'name': 'OCaml'
 'patterns': [
@@ -17,11 +17,11 @@
         'name': 'support.other.module.ocaml'
       '4':
         'name': 'punctuation.separator.module-binding.ocmal'
-    'match': '\\b(let)\\s+(module)\\s+([A-Z][a-zA-Z0-9\'_]*)\\s*(=)'
+    'match': '\\b(let|value)\\s+(module)\\s+([A-Z][a-zA-Z0-9\'_]*)\\s*(=)'
     'name': 'meta.module.binding'
   }
   {
-    'begin': '\\b(let)\\s+(open)\\s+([A-Z][a-zA-Z0-9\'_]*)(?=(\\.[A-Z][a-zA-Z0-9_]*)*)'
+    'begin': '\\b(let|value)\\s+(open)\\s+([A-Z][a-zA-Z0-9\'_]*)(?=(\\.[A-Z][a-zA-Z0-9_]*)*)'
     'beginCaptures':
       '1':
         'name': 'keyword.other.module-binding.ocaml'
@@ -52,7 +52,7 @@
                     Highlights the first word or infix function name after the
                     "let|and" or an optional "rec" as function name.
                     The closing "=" may be preceded by a function type definition.'
-        'begin': '\\b(let|and)\\s+(?!\\(\\*)(rec\\b)?'
+        'begin': '\\b(let|value|and)\\s+(?!\\(\\*)(rec\\b)?'
         'beginCaptures':
           '1':
             'name': 'keyword.other.function-definition.ocaml'
@@ -102,7 +102,7 @@
   }
   {
     'begin': '^\\s*(?=type\\s)'
-    'end': '\\b(?=let|end|val|exception|external|module)'
+    'end': '\\b(?=let|end|val|value|exception|external|module)'
     'name': 'meta.type-definition-group.ocaml'
     'patterns': [
       {
@@ -117,7 +117,7 @@
             'name': 'storage.type.ocaml'
           '3':
             'name': 'punctuation.separator.type-definition.ocaml'
-        'end': '(?=\\b(type|and|let|end|val|exception|external|module)\\b)'
+        'end': '(?=\\b(type|and|let|value|end|val|exception|external|module)\\b)'
         'name': 'meta.type-definition.ocaml'
         'patterns': [
           {
@@ -629,7 +629,7 @@
     'name': 'keyword.control.ocaml'
   }
   {
-    'match': '\\b(as|assert|class|constraint|exception|functor|in|include|inherit|initializer|lazy|let|mod|module|mutable|new|object|open|private|rec|raise|sig|struct|type|virtual)\\b'
+    'match': '\\b(as|assert|class|constraint|exception|functor|in|include|inherit|initializer|lazy|let|value|mod|module|mutable|new|object|open|private|rec|raise|sig|struct|type|virtual)\\b'
     'name': 'keyword.other.misc.ocaml'
   }
   {
@@ -970,7 +970,7 @@
             'name': 'entity.name.type.external-signature.ocaml'
           '3':
             'name': 'punctuation.separator.type-constraint.ocaml'
-        'end': '(?=\\b(type|val|external|class|module|let|end)\\b)|^\\s*$'
+        'end': '(?=\\b(type|val|external|class|module|let|value|end)\\b)|^\\s*$'
         'name': 'meta.module.signature.external.ocaml'
         'patterns': [
           {
