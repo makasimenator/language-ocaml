@@ -555,11 +555,11 @@
     'name': 'entity.name.tag.variable.ocaml'
   }
   {
-    'begin': '\\b(begin)\\b'
+    'begin': '\\b(begin)\\b|(\\()\\s'
     'beginCaptures':
       '1':
         'name': 'keyword.control.begin-end.ocaml'
-    'end': '\\b(end)\\b'
+    'end': '\\b(end)\\b|(\\)|\\);)\\s'
     'endCaptures':
       '1':
         'name': 'keyword.control.begin-end.ocaml'
