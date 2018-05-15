@@ -128,7 +128,7 @@
     ]
   }
   {
-    'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
+    'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\]|\\];|\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
     'beginCaptures':
       '1':
         'name': 'keyword.control.match-definition.ocaml'
@@ -264,7 +264,7 @@
         'name': 'entity.name.type.self-binding.ocaml'
       '4':
         'name': 'punctuation.definition.self-binding.ocaml'
-    'end': '\\b(end;)\\b'
+    'end': '\\b(end)\\b'
     'endCaptures':
       '1':
         'name': 'keyword.control.object.ocaml'
