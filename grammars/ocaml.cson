@@ -264,7 +264,7 @@
         'name': 'entity.name.type.self-binding.ocaml'
       '4':
         'name': 'punctuation.definition.self-binding.ocaml'
-    'end': '\\b(end)\\b'
+    'end': '\\b(end;)\\b'
     'endCaptures':
       '1':
         'name': 'keyword.control.object.ocaml'
@@ -273,7 +273,7 @@
     'name': 'meta.object.ocaml'
     'patterns': [
       {
-        'begin': '\\b(method!?)\\s+(virtual\\s+)?(private\\s+)?([a-z_][a-zA-Z0-9\'_]*)'
+        'begin': '\\b(method|value!?)\\s+(virtual\\s+)?(private\\s+)?([a-z_][a-zA-Z0-9\'_]*)'
         'beginCaptures':
           '1':
             'name': 'keyword.other.method-definition.ocaml'
@@ -448,7 +448,7 @@
     'include': '#arrays'
   }
   {
-    'begin': '\\((val)\\s+'
+    'begin': '\\((val|value)\\s+'
     'beginCaptures':
       '1':
         'name': 'keyword.other.ocaml'
@@ -917,7 +917,7 @@
   'module-signature':
     'patterns': [
       {
-        'begin': '(val)\\s+(([a-z_][a-zA-Z0-9_\']*)|(\\(\\s*[=<>@^&+\\-*/$%|][|!$%&*+./:<=>?@^~-]*\\s*\\)))\\s*(:)'
+        'begin': '(val|value)\\s+(([a-z_][a-zA-Z0-9_\']*)|(\\(\\s*[=<>@^&+\\-*/$%|][|!$%&*+./:<=>?@^~-]*\\s*\\)))\\s*(:)'
         'beginCaptures':
           '1':
             'name': 'keyword.other.ocaml'
@@ -925,7 +925,7 @@
             'name': 'entity.name.type.value-signature.ocaml'
           '5':
             'name': 'punctuation.separator.type-constraint.ocaml'
-        'end': '(?=\\b(type|val|external|class|module|end)\\b)|^\\s*$'
+        'end': '(?=\\b(type|val|value|external|class|module|end)\\b)|^\\s*$'
         'name': 'meta.module.signature.val.ocaml'
         'patterns': [
           {
