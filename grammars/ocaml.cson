@@ -128,7 +128,7 @@
     ]
   }
   {
-    'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\]|\\];|\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
+    'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
     'beginCaptures':
       '1':
         'name': 'keyword.control.match-definition.ocaml'
@@ -138,7 +138,7 @@
         'name': 'keyword.control.match-definition.ocaml'
       '4':
         'name': 'keyword.control.match-exception.ocaml'
-    'end': '(?:(->)|\\b(when)\\b|(?:^|\\s)(?=\\]|\\|))'
+    'end': '(?:(->)|\\b(when)\\b|(?:^|\s)(?=\\||\\]))'
     'endCaptures':
       '1':
         'name': 'punctuation.separator.match-definition.ocaml'
