@@ -127,30 +127,30 @@
       }
     ]
   }
-  {
-    'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.match-definition.ocaml'
-      '2':
-        'name': 'keyword.other.function-definition.ocaml'
-      '3':
-        'name': 'keyword.control.match-definition.ocaml'
-      '4':
-        'name': 'keyword.control.match-exception.ocaml'
-    'end': '(?:(->)|\\b(when)\\b|(?:^|\s)(?=\\||\\]))'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.separator.match-definition.ocaml'
-      '2':
-        'name': 'keyword.control.match-condition.ocaml'
-    'name': 'meta.pattern-match.ocaml'
-    'patterns': [
-      {
-        'include': '#matchpatterns'
-      }
-    ]
-  }
+  # {
+  #   'begin': '(?:\\b(with|function|fun)(?=(\\s*$|.*->))\\b|((?<!\\S)(?:\\[|\\|)(?=(?:\\w|\\s).*)))(?:\\s*(exception)\\b)?'
+  #   'beginCaptures':
+  #     '1':
+  #       'name': 'keyword.control.match-definition.ocaml'
+  #     '2':
+  #       'name': 'keyword.other.function-definition.ocaml'
+  #     '3':
+  #       'name': 'keyword.control.match-definition.ocaml'
+  #     '4':
+  #       'name': 'keyword.control.match-exception.ocaml'
+  #   'end': '(?:(->)|\\b(when)\\b|(?:^|\s)(?=\\||\\]))'
+  #   'endCaptures':
+  #     '1':
+  #       'name': 'punctuation.separator.match-definition.ocaml'
+  #     '2':
+  #       'name': 'keyword.control.match-condition.ocaml'
+  #   'name': 'meta.pattern-match.ocaml'
+  #   'patterns': [
+  #     {
+  #       'include': '#matchpatterns'
+  #     }
+  #   ]
+  # }
   {
     'captures':
       '1':
